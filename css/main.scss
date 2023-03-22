@@ -1,2 +1,132 @@
 @use 'reset.scss';
 @use 'globals.scss';
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  font-family: 'Hanken Grotes', sans-serif;
+}
+
+.result-summary-component {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  max-width: 24rem;
+}
+
+.test-score-section {
+  padding: 2rem 3rem;
+  border-radius: 0 0 2rem 2rem;
+  background: linear-gradient(
+    to bottom right,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--light-lavender);
+}
+
+.test-score-container {
+  background: linear-gradient(
+    to bottom,
+    var(--violet-blue) 50%,
+    var(--persian-blue)
+  );
+  clip-path: circle(5rem);
+  padding: 2rem;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  p {
+    font-weight: 700;
+  }
+}
+
+.score-assessment {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.score-review {
+  font-weight: 500;
+}
+
+.test-results-summary-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  p {
+    margin-left: auto;
+    font-weight: 700;
+    // TODO: check if color is right
+    color: grey;
+
+    span {
+      color: var(--dark-gray-blue);
+    }
+  }
+
+  &:nth-child(1) {
+    color: var(--light-red);
+    background-color: var(--light-red-200);
+  }
+
+  &:nth-child(2) {
+    color: var(--orangey-yellow);
+    background-color: var(--orangey-yellow-200);
+  }
+
+  &:nth-child(3) {
+    color: var(--green-teal);
+    background-color: var(--green-teal-200);
+  }
+
+  &:nth-child(4) {
+    color: var(--cobalt-blue);
+    background-color: var(--cobalt-blue-200);
+  }
+}
+
+.continue-button {
+  border: 1px solid transparent;
+  background-color: var(--dark-gray-blue);
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+      to bottom right,
+      var(--light-slate-blue),
+      var(--light-royal-blue)
+    );
+  }
+}
