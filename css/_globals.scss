@@ -22,9 +22,11 @@
   --white: hsl(0, 0%, 100%);
   --pale-blue: hsl(221, 100%, 96%);
   --light-lavender: hsl(241, 100%, 89%);
-  --dark-gray-blue: hsl(224, 30%, 27%);
+  --dark-gray-blue: #303b5a;
 
   --font-size: 18px;
+
+  --box-shadow: hsla(241, 100%, 89%, 0.4);
 }
 
 //TODO: Replace with variable fonts
